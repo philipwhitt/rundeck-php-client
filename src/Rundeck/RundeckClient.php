@@ -92,9 +92,9 @@ class RundeckClient {
 	}
 
 	public function exportJobs($projectName) {
-		$this->client->get("/api/10/jobs/export?project=$projectName", [
+		return $this->client->get("/api/10/jobs/export?project=$projectName", [
 			'cookies' => ['JSESSIONID' => $this->jsession]
-		]);
+		])->xml()->asXML();
 	}
 
 	public function importJobs($projectName, $xml) {

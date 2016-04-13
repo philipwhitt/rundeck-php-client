@@ -65,4 +65,19 @@ class RundeckClientTest extends \PHPUnit_Framework_TestCase {
 		);
 	}
 
+	public function testExportJobs() {
+		// given
+		$xmlA = file_get_contents(__DIR__.'/exportJobs.xml');
+		$body = Stream::factory($xmlA);
+
+		$mock = new Mock([new Response(200, [], $body)]);
+		$this->client->getHttpClient()->getEmitter()->attach($mock);
+
+		// when
+		$xmlB = $this->client->exportJobs('test');
+
+		// then
+		$this->assertEquals($xmlB, $xmlA);
+	}
+
 }

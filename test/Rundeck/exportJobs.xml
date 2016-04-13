@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<joblist>
+  <job>
+    <id>asd2837lkjsd-6d1e-43ed-8179-dkjfk1j23098</id>
+    <loglevel>INFO</loglevel>
+    <sequence keepgoing="false" strategy="node-first">
+      <command>
+        <exec>echo 'hello world'</exec>
+      </command>
+    </sequence>
+    <description/>
+    <name>Job 1</name>
+    <context>
+      <project>Test</project>
+    </context>
+    <dispatch>
+      <threadcount>1</threadcount>
+      <keepgoing>false</keepgoing>
+      <excludePrecedence>true</excludePrecedence>
+      <rankOrder>ascending</rankOrder>
+    </dispatch>
+    <uuid>asd2837lkjsd-6d1e-43ed-8179-dkjfk1j23098</uuid>
+    <nodefilters>
+      <filter/>
+    </nodefilters>
+    <group>SubTasks</group>
+  </job>
+  <job>
+    <id>j1k2987-5135-4ac0-95e7-klj34298zx9k</id>
+    <loglevel>INFO</loglevel>
+    <sequence keepgoing="false" strategy="node-first">
+      <command>
+        <exec>echo 'lorem ipsum'</exec>
+      </command>
+    </sequence>
+    <description/>
+    <name>Job 2</name>
+    <context>
+      <project>Test</project>
+    </context>
+    <dispatch>
+      <threadcount>1</threadcount>
+      <keepgoing>false</keepgoing>
+      <excludePrecedence>true</excludePrecedence>
+      <rankOrder>ascending</rankOrder>
+    </dispatch>
+    <uuid>j1k2987-5135-4ac0-95e7-klj34298zx9k</uuid>
+    <nodefilters>
+      <filter/>
+    </nodefilters>
+    <group>SubTasks</group>
+  </job>
+</joblist>
