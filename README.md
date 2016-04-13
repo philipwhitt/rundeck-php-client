@@ -43,10 +43,10 @@ foreach ($projects as $project) {
 	file_put_contents('/path-to-jobs/'.$project.'/jobs.xml', $xml);
 }
 
-// create project and import jobs (requires rundeck v2.1.+)
+// create project and import jobs
 $projectName = 'Hello World';
-$rd->deleteProject($projectName);
-$rd->createProject($projectName);
+$rd->deleteProject($projectName); // requires rundeck v2.1.+
+$rd->createProject($projectName); // requires rundeck v2.1.+
 $rd->importJobs($projectName, file_get_contents('/path-to-jobs/jobs.xml'));
 
 ```
