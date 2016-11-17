@@ -49,7 +49,9 @@ class RundeckClient {
 
 		$data = $this->decodeResponse($resp);
 
-		return (new api\ProjectApiMapper)->getAllFromEncoded($data['projects']['project']);
+		$projects = $data['projects']['project'];
+
+		return (new api\ProjectApiMapper)->getAllFromEncoded((int)$data['projects']['@attributes']['count'] > 1 ? $projects : [$projects]);
 	}
 
 	public function getJobs($projectName) {
@@ -59,7 +61,9 @@ class RundeckClient {
 
 		$data = $this->decodeResponse($resp);
 
-		return (new api\JobApiMapper)->getAllFromEncoded($data['jobs']['job']);
+		$jobs = $data['jobs']['job'];
+
+		return (new api\JobApiMapper)->getAllFromEncoded((int)$data['jobs']['@attributes']['count'] > 1 ? $jobs : [$jobs]);
 	}
 
 	public function createProject($name) {
