@@ -15,6 +15,7 @@ class RundeckClient {
 
 	public function __construct($url, $user, $pass) {
 		$this->client = new Client([
+			'defaults' => ['verify' => false],
 			'base_url' => $url
 		]);
 
