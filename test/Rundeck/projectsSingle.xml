@@ -1,13 +1,9 @@
 <?xml version="1.0"?>
 <result success="true" apiversion="16">
-  <projects count="3">
+  <projects count="1">
     <project>
       <name>Project 1</name>
       <description>Lorem Ipsum</description>
-    </project>
-    <project>
-      <name>Project 2</name>
-      <description>Lorem Ipsum 2</description>
     </project>
   </projects>
 </result>

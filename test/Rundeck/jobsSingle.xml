@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<result success="true" apiversion="16">
+  <jobs count="1">
+    <job id="2342345-ac1d-43b2-b00f-uflkJ234" href="http://localhost:4440/api/16/job/2342345-ac1d-43b2-b00f-uflkJ234" permalink="http://localhost:4440/project/dev/job/show/2342345-ac1d-43b2-b00f-uflkJ234">
+      <name>some-job-name</name>
+      <group/>
+      <project>test</project>
+      <description>This is a job for some tests</description>
+    </job>
+  </jobs>
+</result>
